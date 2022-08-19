@@ -1,1 +1,3 @@
 # BankApp
+
+run `pod install`
