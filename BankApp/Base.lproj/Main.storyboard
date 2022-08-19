@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6Vd-FG-VA4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="w0f-BN-dYH">
+            <objects>
+                <viewController id="56Z-yC-Aiq" customClass="ViewController" customModule="BankApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ajv-Sn-Sda">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bz-Ca-wV4">
+                                <rect key="frame" x="57" y="148" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="qH6-kE-KNZ"/>
+                                    <constraint firstAttribute="height" constant="60" id="qHv-6g-fcM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HN4-xd-Mwb">
+                                <rect key="frame" x="43" y="268" width="328" height="136"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HpS-eV-UtE">
+                                        <rect key="frame" x="0.0" y="0.0" width="328" height="32"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="b1b-N7-oWp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Пополнить депозит">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="replenishDeposit:" destination="56Z-yC-Aiq" eventType="touchUpInside" id="pRw-hT-UnQ"/>
+                                            <segue destination="upw-yb-htQ" kind="show" identifier="goToReplenishDeposit" id="Z2u-cH-ss7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YU9-1z-ZnH">
+                                        <rect key="frame" x="0.0" y="52" width="328" height="32"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Снять наличные с депозита">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getCashOperation:" destination="56Z-yC-Aiq" eventType="touchUpInside" id="ynP-7o-bbc"/>
+                                            <segue destination="upw-yb-htQ" kind="show" identifier="goToGetCash" id="cEE-TT-pan"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Chp-QB-4Dd">
+                                        <rect key="frame" x="0.0" y="104" width="328" height="32"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Оплатить мобильную связь">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="replenishMobileAccount:" destination="56Z-yC-Aiq" eventType="touchUpInside" id="OUl-6r-lpV"/>
+                                            <segue destination="upw-yb-htQ" kind="show" identifier="goToReplenishMobileAccount" id="qgU-gH-Jc6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Последние транзакции" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="exw-rm-guO">
+                                <rect key="frame" x="74" y="476" width="266" height="28"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NaE-PO-wHq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="exw-rm-guO" firstAttribute="centerX" secondItem="Ajv-Sn-Sda" secondAttribute="centerX" id="Fkz-wq-9DW"/>
+                            <constraint firstItem="HN4-xd-Mwb" firstAttribute="centerX" secondItem="Ajv-Sn-Sda" secondAttribute="centerX" id="RLI-dK-gE4"/>
+                            <constraint firstItem="5bz-Ca-wV4" firstAttribute="centerX" secondItem="Ajv-Sn-Sda" secondAttribute="centerX" id="ZIo-5x-yX8"/>
+                            <constraint firstItem="5bz-Ca-wV4" firstAttribute="top" secondItem="NaE-PO-wHq" secondAttribute="top" constant="60" id="gcS-F5-XcR"/>
+                            <constraint firstItem="HN4-xd-Mwb" firstAttribute="top" secondItem="5bz-Ca-wV4" secondAttribute="bottom" constant="60" id="nT9-OI-V0K"/>
+                            <constraint firstItem="exw-rm-guO" firstAttribute="top" secondItem="HN4-xd-Mwb" secondAttribute="bottom" constant="42" id="v27-uj-4b9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DFQ-GD-HGC"/>
+                    <connections>
+                        <outlet property="bankAccountLabel" destination="5bz-Ca-wV4" id="Gw4-Nd-MVW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GfD-UV-AhI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657.9710144927537" y="-383.03571428571428"/>
+        </scene>
+        <!--MoneyActionsViewController-->
+        <scene sceneID="vbC-9Y-9da">
+            <objects>
+                <viewController title="MoneyActionsViewController" id="upw-yb-htQ" customClass="MoneyActionsViewController" customModule="BankApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xO1-W7-cIF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="NSH-TO-aOE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="hVJ-e5-t3z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pcv-bE-JbM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2526" y="-383"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="m4h-TF-HyK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Vd-FG-VA4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JTU-ne-WZq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="56Z-yC-Aiq" kind="relationship" relationship="rootViewController" id="LR3-bh-WB5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OKd-D5-DBR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="747.82608695652175" y="-383.03571428571428"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="cEE-TT-pan"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
